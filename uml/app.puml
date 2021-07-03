@@ -1,0 +1,75 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class TodoList {
+    main()
+    start()
+
+    addNewList()
+    deleteList()
+    saveAllExternally()
+    loadList()
+    loadManyList()
+}
+
+class TodoListController {
+    loadButtonClicked()
+    newListButtonClicked()
+    saveListsButtonClicked()
+}
+
+class ListViewController {
+    backButtonClicked()
+    listTitleEdited()
+    saveListItemsButtonClicked()
+    deleteItemButtonClicked()
+    showCompleteButtonClicked()
+    showIncompleteButtonClicked()
+    markedComplete()
+    markedIncomplete()
+    itemDescriptionEdited()
+    itemDueDateEdited()
+}
+
+class MainClass {
+
+}
+
+class List {
+    String title
+    List<item> itemList
+
+    List()
+    getTitle()
+    setTitle()
+    addNewItem()
+    DeleteItem()
+    editDescription()
+    editDueDate()
+    editStatus()
+    saveItemsExternally()
+}
+
+class Item {
+    String description
+    String dueDate
+    boolean complete
+
+    Item()
+    setDescription()
+    getDescription()
+    setDueDate()
+    getDueDate()
+    getStatus()
+    markComplete()
+    markIncomplete()
+}
+
+javafx.Application <|-- MainClass
+MainClass <|-- TodoList
+TodoList -- List
+TodoList -- TodoListController
+TodoList -- ListViewController
+List - Item
+
+@enduml
