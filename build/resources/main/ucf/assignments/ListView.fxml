@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.ListViewController">
+   <children>
+      <ToolBar prefHeight="40.0" prefWidth="600.0">
+        <items>
+          <Button mnemonicParsing="false" text="Back" />
+        </items>
+      </ToolBar>
+      <TextField layoutX="14.0" layoutY="53.0" prefHeight="25.0" prefWidth="293.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </TextField>
+      <ListView layoutX="14.0" layoutY="102.0" prefHeight="211.0" prefWidth="573.0" />
+      <Text layoutX="17.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add item: " />
+      <TextField layoutX="70.0" layoutY="316.0" prefHeight="25.0" prefWidth="210.0" />
+      <Button layoutX="336.0" layoutY="316.0" mnemonicParsing="false" text="Mark complete" />
+      <Button layoutX="434.0" layoutY="316.0" mnemonicParsing="false" text="Mark incomplete" />
+      <Button layoutX="283.0" layoutY="316.0" mnemonicParsing="false" text="Delete" />
+      <Button layoutX="542.0" layoutY="316.0" mnemonicParsing="false" text="Save" />
+      <CheckBox layoutX="197.0" layoutY="369.0" mnemonicParsing="false" text="Show complete" />
+      <CheckBox layoutX="309.0" layoutY="369.0" mnemonicParsing="false" text="Show inomplete" />
+   </children>
+</AnchorPane>

@@ -4,7 +4,7 @@ public class Item {
     /*
     has string "description"
     has string "dueDate"
-    has boolean "status"
+    has string "status"
      */
 
 
@@ -14,7 +14,7 @@ public class Item {
         use "this":
         create description
         create due date
-        set default status to false
+        set default status to I
          */
     }
 
@@ -38,15 +38,15 @@ public class Item {
         // set due date
     }
 
-  //  public boolean getStatus() {
+  //  public String getStatus() {
         // return status
   //  }
 
     public void markComplete() {
-        // set status to true
+        // set status to C
     }
 
     public void markIncomplete() {
-        // set status to false
+        // set status to I
     }
 }
