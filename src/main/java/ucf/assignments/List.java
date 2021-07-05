@@ -7,6 +7,7 @@ public class List {
     /*
     has a string "title"
     has a list of items "itemList"
+    has a string "directory"
      */
 
     // constructor
@@ -25,6 +26,12 @@ public class List {
     // takes parameter title
     public void setTitle() {
         // set title
+    }
+
+    public void setDirectory() {
+        /*
+        set directory as input
+         */
     }
 
     // takes parameter description and due date
@@ -69,7 +76,20 @@ public class List {
          */
     }
 
-    public void saveItemsExternally() {
+    public void createDirectory() {
+        /*
+        create new directory based on what is in the "directory" string
+        if directory already exists, this should do nothing
+         */
+    }
 
+    public void saveListExternally() {
+        /*
+        create new text file "[list title].txt" in the specified directory
+            using file writer, write list to a file
+                first line is list title
+                each subsequent line are items: description, due date, and status separated by commas
+                i.e.: "todo list title,due date,status"
+         */
     }
 }

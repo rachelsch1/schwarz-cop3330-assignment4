@@ -6,7 +6,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -75,14 +74,14 @@ public class ListViewController  implements Initializable {
     // end of methods that set up editable table
 
     @FXML
-    private void itemAdded(ActionEvent e) {
+    private void itemAdded(ActionEvent event) {
         /*
         call load data which adds a new row to the table
          */
     }
 
     @FXML
-    void backButtonClicked(MouseEvent event) {
+    void backButtonClicked(ActionEvent event) {
         /*
         go back to start window:
             create new parent and open TodoList.fxml
@@ -94,13 +93,24 @@ public class ListViewController  implements Initializable {
     }
 
     @FXML
-    void deleteItemButtonClicked(MouseEvent event) {
-
+    void deleteItemButtonClicked(ActionEvent event) {
+        /*
+        remove row from tableview
+        call List.deleteItem, pass description
+         */
     }
 
     @FXML
-    void deleteListButtonClicked(MouseEvent event) {
-
+    void deleteListButtonClicked(ActionEvent event) {
+        /*
+        call TodoList.deleteList and pass list title
+        go back to start window:
+            create new parent and open TodoList.fxml
+            create new scene
+            create new stage and get stage info
+            set scene
+            show window
+         */
     }
 
     @FXML
@@ -111,16 +121,48 @@ public class ListViewController  implements Initializable {
     }
 
     @FXML
-    void markedComplete(MouseEvent event) {
+    void markedComplete(ActionEvent event) {
         /*
         change value of item.status to C
          */
     }
 
     @FXML
-    void markedIncomplete(MouseEvent event) {
+    void markedIncomplete(ActionEvent event) {
         /*
         change value of item.status to I
          */
     }
+
+    @FXML
+    void showCompleteSelected(ActionEvent event) {
+        /*
+
+         */
+    }
+    @FXML
+    void showIncompleteSelected(ActionEvent event) {
+        /*
+
+         */
+    }
+
+    @FXML
+    void saveListButtonClicked(ActionEvent event) {
+        /*
+        (save current list)
+        prompt user for directory:
+            create new text input dialog
+            set title of text input dialog
+            set content of input dialog to "please input directory"
+            set field as string and show and wait
+
+            create new text field and make editable
+            collect user input
+            call List.setDirectory
+            call List.createDirectory
+            call List.saveListExternally
+         */
+    }
+
 }
