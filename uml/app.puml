@@ -2,48 +2,88 @@
 'https://plantuml.com/sequence-diagram
 
 class TodoList {
-    main()
-    start()
+    todoLists: List<List>
+    directory: String
 
+    setDirectory()
+    createDirectory()
     addNewList()
     deleteList()
+    editListTitle()
     saveAllExternally()
     loadList()
-    loadManyList()
 }
 
 class TodoListController {
     loadButtonClicked()
     newListButtonClicked()
     saveListsButtonClicked()
+    openListButtonClicked
 }
 
 class ListViewController {
+    initialize()
+    initTable()
+    initCols()
+    editableCols()
+    loadData()
+    loadNewData()
+    setTitle()
+    itemAdded()
     backButtonClicked()
-    listTitleEdited()
-    saveListItemsButtonClicked()
     deleteItemButtonClicked()
+    deleteListButtonClicked()
+    listTitleEdited()
+    loadComplete()
+    loadIncomplete()
     showCompleteButtonClicked()
     showIncompleteButtonClicked()
+    showAllButtonClicked()
     markedComplete()
     markedIncomplete()
-    itemDescriptionEdited()
-    itemDueDateEdited()
+    saveListButtonClicked()
+}
+
+class ListViewOpenController {
+    selectedList: List
+
+    initialize()
+    initTable()
+    initCols()
+    editableCols()
+    loadData()
+    itemAdded()
+    backButtonClicked()
+    deleteItemButtonClicked()
+    deleteListButtonClicked()
+    listTitleEdited()
+    loadComplete()
+    loadIncomplete()
+    showCompleteButtonClicked()
+    showIncompleteButtonClicked()
+    showAllButtonClicked()
+    markedComplete()
+    markedIncomplete()
+    saveListButtonClicked()
 }
 
 class MainClass {
-
+ main()
+ start()
 }
 
 class List {
-    String title
-    List<item> itemList
+    title: String
+    itemList: List<Item>
+    directory: String
 
     List()
     getTitle()
     setTitle()
+    setDirectory()
+    createDirectory()
     addNewItem()
-    DeleteItem()
+    deleteItem()
     editDescription()
     editDueDate()
     editStatus()
@@ -51,9 +91,9 @@ class List {
 }
 
 class Item {
-    String description
-    String dueDate
-    boolean complete
+    description: String
+    dueDate: String
+    status: String
 
     Item()
     setDescription()
@@ -70,6 +110,7 @@ MainClass <|-- TodoList
 TodoList -- List
 TodoList -- TodoListController
 TodoList -- ListViewController
+TodoList -- ListViewOpenController
 List - Item
 
 @enduml

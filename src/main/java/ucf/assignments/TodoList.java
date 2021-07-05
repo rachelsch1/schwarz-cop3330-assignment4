@@ -73,8 +73,17 @@ public class TodoList {
          */
   //  }
 
+    // takes title parameter
     public void loadList() {
+        /*
+        using directory string, open text file with the name that matches the title parameter
+        call addNewList
+        using Scanner, read first line and put into the list's title
 
+        for loop for items
+            create new item in the list
+            using Scanner, read in description, due date, and status using comma as delimiter
+         */
     }
 
 }

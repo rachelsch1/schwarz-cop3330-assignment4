@@ -10,7 +10,7 @@ import javafx.scene.control.TextField;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class ListViewController  implements Initializable {
+public class ListViewController implements Initializable {
     @FXML
     private TextField listTitle;
 
@@ -76,7 +76,7 @@ public class ListViewController  implements Initializable {
     @FXML
     private void itemAdded(ActionEvent event) {
         /*
-        call load data which adds a new row to the table
+        call loadData which adds a new row to the table
          */
     }
 
@@ -134,16 +134,40 @@ public class ListViewController  implements Initializable {
          */
     }
 
-    @FXML
-    void showCompleteSelected(ActionEvent event) {
+    private void loadComplete() {
         /*
-
+        loop through selectedList's items
+        if status = I, skip
+        if status = C, load into table
          */
     }
-    @FXML
-    void showIncompleteSelected(ActionEvent event) {
-        /*
 
+    private void loadIncomplete() {
+        /*
+        loop through selectedList's items
+        if status = I, load into table
+        if status = C, skip
+         */
+    }
+
+    @FXML
+    void showCompleteButtonClicked(ActionEvent event) {
+        /*
+        call loadComplete
+         */
+    }
+
+    @FXML
+    void showIncompleteButtonClicked(ActionEvent event) {
+        /*
+        call loadIncomplete
+         */
+    }
+
+    @FXML
+    void showAllSelected(ActionEvent event) {
+        /*
+        call loadData
          */
     }
 

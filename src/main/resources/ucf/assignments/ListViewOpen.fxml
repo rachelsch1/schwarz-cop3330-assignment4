@@ -11,9 +11,9 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.ListViewController">
    <children>
       <ToolBar prefHeight="40.0" prefWidth="600.0">
-        <items>
-          <Button mnemonicParsing="false" onAction="#backButtonClicked" text="Back" />
-        </items>
+         <items>
+            <Button mnemonicParsing="false" onAction="#backButtonClicked" text="Back" />
+         </items>
       </ToolBar>
       <TextField fx:id="listTitle" layoutX="8.0" layoutY="53.0" onAction="#listTitleEdited" prefHeight="25.0" prefWidth="293.0" text="New list">
          <font>
@@ -22,17 +22,17 @@
       </TextField>
       <Button layoutX="14.0" layoutY="328.0" mnemonicParsing="false" onAction="#itemAdded" text="Add item" />
       <TableView fx:id="list" layoutX="8.0" layoutY="97.0" prefHeight="227.0" prefWidth="584.0">
-        <columns>
-          <TableColumn fx:id="colItem" prefWidth="434.0" text="Item" />
-          <TableColumn fx:id="colDate" prefWidth="91.0" text="Due date" />
+         <columns>
+            <TableColumn fx:id="colItem" prefWidth="434.0" text="Item" />
+            <TableColumn fx:id="colDate" prefWidth="91.0" text="Due date" />
             <TableColumn fx:id="colStatus" prefWidth="58.0" text="Status" />
-        </columns>
+         </columns>
       </TableView>
       <Button layoutX="519.0" layoutY="53.0" mnemonicParsing="false" onAction="#deleteListButtonClicked" text="Delete list" />
       <ToolBar layoutY="381.0" prefHeight="35.0" prefWidth="601.0">
          <items>
-            <Button mnemonicParsing="false" onAction="#showCompleteButtonClicked" text="Show complete" />
-            <Button mnemonicParsing="false" onAction="#showIncompleteButtonClicked" text="Show incomplete" />
+            <Button mnemonicParsing="false" onAction="#showCompleteSelected" text="Show complete" />
+            <Button mnemonicParsing="false" onAction="#showIncompleteSelected" text="Show incomplete" />
             <Button mnemonicParsing="false" onAction="#showAllSelected" text="Show all" />
             <Button mnemonicParsing="false" onAction="#deleteItemButtonClicked" text="Delete" />
             <Button mnemonicParsing="false" onAction="#markedComplete" text="Mark complete" />
