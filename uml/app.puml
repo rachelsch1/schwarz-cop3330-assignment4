@@ -5,6 +5,7 @@ class TodoList {
     todoLists: List<List>
     directory: String
 
+    TodoList()
     setDirectory()
     createDirectory()
     addNewList()
